@@ -3,13 +3,13 @@ import React, { useState, useEffect, useRef } from 'react';
 function TodoForm(props) {
     const [input, setInput] = useState(props.edit ? props.edit.value : '');
 
-    const inoutRef = useRef(null);
+    const inputRef = useRef(null);
 
     useEffect(() => {
         inputRef.current.focus();
     });
 
-    const handleChage = e => {
+    const handleChange = e => {
         setInput(e.target.value);
     };
 
